@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[tbl_AttributeTRAVELOFFICER] (
+    [ID]            INT           IDENTITY (1, 1) NOT NULL,
+    [TRAVELOFFICER] VARCHAR (200) NULL,
+    CONSTRAINT [PK_tbl_AttributeTRAVELOFFICER] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

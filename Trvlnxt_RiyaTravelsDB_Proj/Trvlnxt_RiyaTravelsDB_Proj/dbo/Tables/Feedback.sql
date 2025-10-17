@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[Feedback] (
+    [PKId]              INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Name]              VARCHAR (50)   NULL,
+    [Email]             VARCHAR (100)  NULL,
+    [Feedback]          VARCHAR (1000) NULL,
+    [IP]                VARCHAR (50)   NULL,
+    [Device]            VARCHAR (50)   NULL,
+    [ContactNo]         VARCHAR (50)   NULL,
+    [InquiryType]       VARCHAR (50)   NULL,
+    [Browser]           VARCHAR (50)   NULL,
+    [InsertDateTime]    DATETIME       CONSTRAINT [DF_Feedback_InsertDateTime] DEFAULT (getdate()) NULL,
+    [Country]           VARCHAR (5)    NULL,
+    [SubInquiry]        VARCHAR (500)  NULL,
+    [City]              VARCHAR (50)   NULL,
+    [TravelDate]        DATETIME       NULL,
+    [IntrestIn]         NVARCHAR (500) NULL,
+    [BookingID]         NVARCHAR (100) NULL,
+    [Rating]            INT            NULL,
+    [OrganisationName]  VARCHAR (100)  NULL,
+    [DestlookingFor]    VARCHAR (100)  NULL,
+    [DeptArvlDates]     VARCHAR (100)  NULL,
+    [GroupSize]         INT            NULL,
+    [VisaCountry]       NVARCHAR (50)  NULL,
+    [CorporateLandLine] NVARCHAR (50)  NULL,
+    CONSTRAINT [PK_Feedback] PRIMARY KEY CLUSTERED ([PKId] ASC)
+);
+

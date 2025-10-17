@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[tbl_mLFS_PCC] (
+    [Id]                INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [TimeZone]          VARCHAR (10)   NOT NULL,
+    [FromDate]          DATETIME       NULL,
+    [ToDate]            DATETIME       NULL,
+    [IsRepeateEveryDay] BIT            NOT NULL,
+    [PCC]               NVARCHAR (50)  NOT NULL,
+    [LFS_ToEmail]       NVARCHAR (200) NOT NULL,
+    [LFS_CCEmail]       NVARCHAR (200) NOT NULL,
+    [QueueNoLFS]        NVARCHAR (50)  NOT NULL,
+    [RunningWithoutLFS] BIT            NOT NULL,
+    [DepartmentID]      INT            NOT NULL,
+    [LFSBufferAmount]   DECIMAL (18)   NOT NULL,
+    [Status]            INT            NULL,
+    [CreatedBy]         INT            NOT NULL,
+    [CreatedDate]       DATETIME       NOT NULL,
+    [UpdatedBy]         INT            NULL,
+    [UpdatedDate]       DATETIME       NULL,
+    [Group]             NVARCHAR (100) NULL,
+    [Country]           NVARCHAR (100) NULL,
+    [TimeSchedular]     NVARCHAR (5)   NULL,
+    [Vendor]            VARCHAR (3)    DEFAULT ((1)) NULL,
+    CONSTRAINT [PK_tbl_mLFS_PCC] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

@@ -1,0 +1,27 @@
+﻿CREATE TABLE [SS].[tbl_SS_ServiceFee] (
+    [Id]                 INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [MarketPoint]        VARCHAR (30)   NULL,
+    [UserType]           VARCHAR (30)   NULL,
+    [TravelValidityFrom] DATETIME       NULL,
+    [TravelValidityTo]   DATETIME       NULL,
+    [SaleValidityFrom]   DATETIME       NULL,
+    [SaleValidityTo]     DATETIME       NULL,
+    [Currency]           VARCHAR (10)   NULL,
+    [GST]                VARCHAR (30)   NULL,
+    [BookingType]        INT            NULL,
+    [CommissionType]     VARCHAR (20)   NULL,
+    [Commission]         DECIMAL (8, 2) NULL,
+    [ReservationType]    VARCHAR (10)   NULL,
+    [TimeSlotFrom]       VARCHAR (10)   NULL,
+    [TimeSlotTo]         VARCHAR (10)   NULL,
+    [AgentId]            VARCHAR (100)  NULL,
+    [IsActive]           BIT            NULL,
+    [CreatedDate]        DATETIME       NULL,
+    [ModifiedDate]       DATETIME       NULL,
+    [CreatedBy]          VARCHAR (50)   NULL,
+    [ModifyBy]           VARCHAR (50)   NULL,
+    [SupplierType]       VARCHAR (50)   NULL,
+    [ServiceType]        VARCHAR (20)   NULL,
+    CONSTRAINT [PK_tbl_SS_ServiceFee] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

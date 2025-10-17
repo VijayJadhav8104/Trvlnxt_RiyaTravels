@@ -1,0 +1,3 @@
+﻿CREATE USER [DB_TEST]
+    WITH DEFAULT_SCHEMA = [Cruise];
+

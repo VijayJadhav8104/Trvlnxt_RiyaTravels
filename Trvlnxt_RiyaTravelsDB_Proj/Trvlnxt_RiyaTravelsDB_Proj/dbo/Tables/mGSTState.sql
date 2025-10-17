@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[mGSTState] (
+    [ID]       INT           IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [GSTState] VARCHAR (MAX) NOT NULL,
+    CONSTRAINT [PK_mGSTState] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[AgentTopupLog] (
+    [AgentTopupLogIDP]      BIGINT          IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [UserID]                INT             NULL,
+    [Amount]                NUMERIC (18, 2) NULL,
+    [PaymentGatewayMode]    VARCHAR (50)    NULL,
+    [ConvenienceFeeCharges] NUMERIC (18, 2) NULL,
+    [ConvenienceFeeAmount]  NUMERIC (18, 2) NULL,
+    [PayableAmount]         NUMERIC (18, 2) NULL,
+    [CardNo]                VARCHAR (50)    NULL,
+    [ExpiryDate]            VARCHAR (50)    NULL,
+    [AgentCountry]          VARCHAR (50)    NULL,
+    [UserType]              VARCHAR (50)    NULL,
+    [AgentCurrency]         VARCHAR (50)    NULL,
+    [AgencyContactNo]       VARCHAR (50)    NULL,
+    [AgencyEmail]           VARCHAR (200)   NULL,
+    [AgencyName]            VARCHAR (50)    NULL,
+    [ICUST]                 VARCHAR (50)    NULL,
+    [FirstName]             VARCHAR (50)    NULL,
+    [LastName]              VARCHAR (50)    NULL,
+    [TransactionID]         VARCHAR (50)    NULL,
+    [RPGTxnID]              VARCHAR (50)    NULL,
+    [RPGStatus]             VARCHAR (50)    NULL,
+    [RPGFailMessage]        VARCHAR (250)   NULL,
+    [EntryDate]             DATETIME        CONSTRAINT [DF_AgentTopupLog_EntryDate] DEFAULT (getdate()) NULL,
+    [ParentAgentID]         BIGINT          NULL,
+    CONSTRAINT [PK_AgentTopupLog] PRIMARY KEY CLUSTERED ([AgentTopupLogIDP] ASC)
+);
+

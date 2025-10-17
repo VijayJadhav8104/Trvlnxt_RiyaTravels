@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Cruise]
+    AUTHORIZATION [DB_TEST];
+

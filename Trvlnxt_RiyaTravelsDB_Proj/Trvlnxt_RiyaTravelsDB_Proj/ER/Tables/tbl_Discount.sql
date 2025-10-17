@@ -1,0 +1,28 @@
+﻿CREATE TABLE [ER].[tbl_Discount] (
+    [Id]                 INT             IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [MarketPoint]        VARCHAR (30)    NULL,
+    [UserType]           VARCHAR (30)    NULL,
+    [TravelValidityFrom] DATETIME        NULL,
+    [TravelValidityTo]   DATETIME        NULL,
+    [SaleValidityFrom]   DATETIME        NULL,
+    [SaleValidityTo]     DATETIME        NULL,
+    [Origin]             VARCHAR (30)    NULL,
+    [Destination]        VARCHAR (30)    NULL,
+    [GST]                VARCHAR (30)    NULL,
+    [BookingType]        INT             NULL,
+    [Cabin]              VARCHAR (50)    NULL,
+    [Deck]               VARCHAR (50)    NULL,
+    [Room]               VARCHAR (50)    NULL,
+    [Currency]           VARCHAR (10)    NULL,
+    [ServiceType]        VARCHAR (50)    NULL,
+    [isActive]           BIT             NULL,
+    [CreatedDate]        DATETIME        NULL,
+    [ModifiedDate]       DATETIME        NULL,
+    [CreatedBy]          NVARCHAR (50)   NULL,
+    [ModifyBy]           NVARCHAR (50)   NULL,
+    [SupplierType]       NVARCHAR (50)   NULL,
+    [AgentId]            NVARCHAR (300)  NULL,
+    [TDS]                DECIMAL (18, 2) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

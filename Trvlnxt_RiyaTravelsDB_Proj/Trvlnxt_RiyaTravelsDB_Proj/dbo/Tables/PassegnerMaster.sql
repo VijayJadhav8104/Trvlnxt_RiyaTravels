@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[PassegnerMaster] (
+    [pid]              BIGINT        IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [paxfname]         VARCHAR (50)  NULL,
+    [paxlname]         VARCHAR (50)  NULL,
+    [mobno]            VARCHAR (20)  NULL,
+    [emailid]          VARCHAR (30)  NULL,
+    [cityname]         VARCHAR (30)  NULL,
+    [countryname]      VARCHAR (30)  NULL,
+    [passportnum]      VARCHAR (30)  NULL,
+    [passexp]          DATE          NULL,
+    [cruiseid]         VARCHAR (150) NULL,
+    [ship]             VARCHAR (60)  NULL,
+    [docpath]          TEXT          NULL,
+    [cruisetype]       CHAR (1)      NULL,
+    [cruisetypereturn] CHAR (1)      NULL,
+    [cruiseline]       VARCHAR (150) NULL,
+    [inserteddate]     DATETIME      CONSTRAINT [DF_PassegnerMaster_inserteddate] DEFAULT (getdate()) NULL,
+    [status]           CHAR (1)      CONSTRAINT [DF_PassegnerMaster_status] DEFAULT ('A') NULL,
+    [title]            VARCHAR (5)   NULL,
+    [dob]              DATE          NULL,
+    [nationality]      VARCHAR (30)  NULL,
+    [gender]           CHAR (1)      CONSTRAINT [DF_PassegnerMaster_gender] DEFAULT ('M') NULL,
+    [ERPKey]           NCHAR (50)    NULL,
+    CONSTRAINT [PK_PassegnerMaster] PRIMARY KEY CLUSTERED ([pid] ASC)
+);
+

@@ -1,0 +1,14 @@
+﻿CREATE TABLE [Invoice].[Payment] (
+    [ID]           BIGINT          IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [IV_NO]        VARCHAR (50)    NULL,
+    [ORDER_ID]     VARCHAR (100)   NULL,
+    [PAYMENT_MODE] VARCHAR (50)    NULL,
+    [IV_AMT_INR]   DECIMAL (19, 2) NULL,
+    [TRAN_AMT]     DECIMAL (19, 2) NULL,
+    [CREATED_BY]   VARCHAR (50)    NULL,
+    [CREATED_DATE] DATETIME        CONSTRAINT [DF_OB_PAYMENT_CREATED_DATE] DEFAULT (getdate()) NULL,
+    [Module]       VARCHAR (100)   NULL,
+    [Currency]     VARCHAR (50)    NULL,
+    CONSTRAINT [PK_OB_PAYMENT] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

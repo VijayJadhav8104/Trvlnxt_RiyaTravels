@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[mCardDetails] (
+    [pkid]             INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [BankName]         VARCHAR (200)  NULL,
+    [CardType]         VARCHAR (50)   NULL,
+    [CardNumber]       VARCHAR (1000) NULL,
+    [ExpiryDate]       VARCHAR (500)  NULL,
+    [InsertedDate]     DATETIME       CONSTRAINT [DF_mCardDetails_InsertedDate] DEFAULT (getdate()) NULL,
+    [InsertedBy]       INT            NULL,
+    [UpdatedDate]      DATETIME       NULL,
+    [UpdatedBy]        INT            NULL,
+    [Status]           BIT            CONSTRAINT [DF_mCardDetails_Status] DEFAULT ((1)) NULL,
+    [CardTypeCode]     NCHAR (10)     NULL,
+    [MarketPoint]      VARCHAR (30)   NULL,
+    [UserType]         VARCHAR (30)   NULL,
+    [StreetAddress]    VARCHAR (250)  NULL,
+    [City]             VARCHAR (30)   NULL,
+    [State]            VARCHAR (30)   NULL,
+    [Country]          VARCHAR (30)   NULL,
+    [PostalCode]       INT            NULL,
+    [CardHolderName]   VARCHAR (100)  NULL,
+    [VerificationCode] VARCHAR (500)  NULL,
+    [MaskCardNumber]   VARCHAR (1000) NULL,
+    [Configuration]    VARCHAR (30)   NULL,
+    CONSTRAINT [PK_mCardDetails] PRIMARY KEY CLUSTERED ([pkid] ASC)
+);
+

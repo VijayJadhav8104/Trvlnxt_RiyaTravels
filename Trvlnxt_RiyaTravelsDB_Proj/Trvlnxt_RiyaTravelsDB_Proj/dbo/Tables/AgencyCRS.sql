@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[AgencyCRS] (
+    [Id]   INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Name] NVARCHAR (100) NULL,
+    CONSTRAINT [PK_AgencyCRS] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

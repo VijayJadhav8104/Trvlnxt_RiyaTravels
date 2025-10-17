@@ -1,0 +1,356 @@
+﻿CREATE proc [dbo].[UpdateFM]      
+      
+@ID int,      
+@MarketPoint varchar(30),      
+@AirportType varchar(50),      
+@AirLineCode varchar(max),      
+@UserType varchar(50),      
+@FlightNo bit,      
+@FlightNoValue varchar(max),      
+@TravelValidity_From datetime,      
+@TravelValidity_To datetime,      
+@SalesValidity_From datetime,      
+@SalesValidity_To datetime,      
+@RBD  bit,      
+@RBDValue varchar(max)=null,      
+@FareBasis bit,      
+@FareBasisValue varchar(max)=null,      
+@Origin  bit,      
+@OriginValue varchar(max)=null,      
+@Destination bit,      
+@DestinationValue varchar(max)=null,      
+@FlightSeries bit,      
+@AgentCategory varchar(max)=null,      
+@AgencyNames varchar(max)=null,      
+@AgencyId varchar(max)=null,      
+@FlightSeriesValue varchar(max)=null,      
+@Remark varchar(max)= null,      
+@Cabin varchar(max),      
+@PricingCode varchar(max)=NULL,      
+@TourCode varchar(max)=NULL,      
+@Commission decimal(18, 2)=null,      
+@IATADealType NVARCHAR(10)=NULL,      
+@IATADealPercent decimal(18, 2)=NULL,      
+@PLBDealType NVARCHAR(10)=NULL,      
+@PLBDealPercent decimal(18, 2)=NULL,      
+@CRSType varchar(max)=NULL,      
+@AvailabilityPCC varchar(max)=NULL,      
+@PNRCreationPCC varchar(max)=NULL,      
+@TicketingPCC varchar(max)=NULL,      
+@IATADiscountType int=null,      
+@PLBDiscountType int=null,      
+@CardMapping1 int=null,      
+@CardMapping2 int=null,      
+@CardMapping3 int=null,      
+@CardMapping4 int=null,      
+@CardMapping5 int=null,      
+@Endorsementline varchar(50)=null,      
+@UserID int,      
+@FareType varchar(max)=null,      
+@MarkupType int=null,      
+@MarkupAmount decimal(18, 2)=NULL,      
+@MarkupDealType NVARCHAR(10)=NULL,      
+@PaxType varchar(100)=null,      
+@DropNetCommission decimal(18, 2)=NULL,      
+@Paymode  VARCHAR(50)=null,      
+@VCName VARCHAR(50)=null,      
+@LoginId varchar(max)=null,    
+@GST decimal(18,2)=null,    
+@TDS decimal(18,2)=null,  
+@GDSDiscountType int=null,  
+@GDSDealType varchar(20)=null , 
+@GDSCommission decimal(18,2)=null , 
+@AdditionalAmtType varchar(30)=null,
+@AdditionalAmount decimal(18,2)=null,
+@NetRemitCode varchar(30)=null,
+@Currency varchar(20)=null,
+@Discounttype varchar(200)=null,
+@Percentage decimal(18, 2)=null,
+@LimitValue decimal(18, 2)=null,
+@Hup_Amt decimal(18, 2)=null,
+@Fromval decimal(18, 2)=null,
+@Toval decimal(18, 2)=null,
+@EmailId varchar(max)=null,
+@Queueno varchar(500)=null,
+@AutoTkt bit,
+@OTP varchar(30)=null,
+@TktAccess bit,
+@OriginCountry VARCHAR(MAX)=NULL,
+@DestinationCountry VARCHAR(MAX)=NULL,
+@AgentLogin VARCHAR(100)=NULL,
+@Password VARCHAR(100)=NULL,
+@IATA VARCHAR(100)=NULL,
+@AgentIdentifier VARCHAR(100)=NULL,
+@ViaPoint BIT=0,
+@ViaPointValue VARCHAR(MAX)=NULL,
+@SOTO bit
+as      
+begin      
+      
+insert into FlightCommissionHistory       
+(      
+ParentId,      
+[Action],      
+TravelValidityFrom,      
+TravelValidityTo,      
+SaleValidityFrom,      
+SaleValidityTo,      
+RBD,      
+RBDValue,      
+FareBasis,      
+FareBasisValue,      
+AgencyNames,      
+Origin,      
+OriginValue,      
+Destination,      
+DestinationValue,      
+FlightSeries,      
+FlightSeriesValue,      
+Remark,      
+Flag,      
+[FlightNovalue],      
+[Cabin],      
+PricingCode,      
+TourCode,      
+Commission,      
+IATADealType,       
+IATADealPercent,       
+PLBDealType,       
+PLBDealPercent,      
+CRSType,      
+AvailabilityPCC,      
+PNRCreationPCC,      
+TicketingPCC,      
+IATADiscountType,      
+PLBDiscountType,      
+CardMapping1,      
+CardMapping2,      
+CardMapping3,      
+CardMapping4,      
+CardMapping5,      
+Endorsementline,      
+FlightNo,      
+ModifiedBy,      
+FareType,      
+MarkupType,      
+MarkupAmount,      
+MarkupDealType,      
+PaxType,      
+DropnetCommission,      
+LoginId,      
+PayMode,      
+VirtualCardName,    
+GST,    
+TDS,  
+GDSDiscountType,  
+GDSDealType ,
+gdscommission,
+AdditionalAmount,
+AdditionalAmtType,
+NetRemitCode,
+ [UserType]
+      ,[AgencyId]
+      ,[AgentCategory]
+      ,[ConfigurationType]
+      ,[SOTO]
+      ,[UserID]
+      ,[MarketPoint]
+      ,[AirportType]
+      ,[AirlineType]
+	  ,[Discounttype]
+      ,[Percentage]
+      ,[LimitValue]
+      ,[Currency]
+      ,[HUP_Amount]
+      ,[FromValue]
+      ,[ToValue]
+	 , AutoTicketing,
+Queueno,
+EmailId,
+TicketingAccess,
+OTP,OriginCountry,DestinationCountry,AgentLogin,Password,IATA,AgentIdentifier,ViaPoint,ViaPointValue
+  
+)      
+select       
+Id,      
+'Update',      
+TravelValidityFrom,      
+TravelValidityTo,      
+SaleValidityFrom,      
+SaleValidityTo,      
+RBD,      
+RBDValue,      
+FareBasis,      
+FareBasisValue,      
+AgencyNames,      
+Origin,      
+OriginValue,      
+Destination,      
+DestinationValue,      
+FlightSeries,      
+FlightSeriesValue,      
+Remark,      
+Flag,      
+[FlightNovalue],      
+[Cabin],      
+PricingCode,      
+TourCode,      
+Commission,      
+IATADealType,       
+IATADealPercent,       
+PLBDealType,       
+PLBDealPercent,      
+CRSType,      
+AvailabilityPCC,      
+PNRCreationPCC,      
+TicketingPCC,      
+IATADiscountType,      
+PLBDiscountType,      
+CardMapping1,      
+CardMapping2,      
+CardMapping3,      
+CardMapping4,      
+CardMapping5,      
+Endorsementline,      
+FlightNo,      
+@UserID,      
+FareType,      
+MarkupType,      
+MarkupAmount,      
+MarkupDealType,      
+PaxType,      
+DropnetCommission,      
+LoginId,      
+PayMode,      
+VirtualCardName,    
+GST,    
+TDS ,  
+GDSDiscountType,  
+GDSDealType,
+GDSCommission,
+AdditionalAmount,
+AdditionalAmtType,
+NetRemitCode,
+ [UserType]
+      ,[AgencyId]
+      ,[AgentCategory]
+      ,[ConfigurationType]
+      ,[SOTO]
+      ,[UserID]
+      ,[MarketPoint]
+      ,[AirportType]
+      ,[AirlineType]
+	  ,[Discounttype]
+      ,[Percentage]
+      ,[LimitValue]
+      ,[Currency]
+      ,[HUP_Amount]
+      ,[FromValue]
+      ,[ToValue]
+	  ,AutoTicketing,
+Queueno,
+EmailId,
+TicketingAccess,
+OTP,OriginCountry,DestinationCountry,AgentLogin,Password,IATA,AgentIdentifier,ViaPoint,ViaPointValue
+
+from FlightCommission where id=@ID      
+      
+update FlightCommission      
+set      
+      
+--MarketPoint= @MarketPoint,      
+--AirportType=@AirportType,      
+    
+UserType=@UserType,      
+Remark=@Remark,      
+TravelValidityFrom=@TravelValidity_From,      
+TravelValidityTo=DATEADD(s, 43199,@TravelValidity_To),      
+SaleValidityFrom=@SalesValidity_From,      
+SaleValidityTo=DATEADD(s, 43199,@SalesValidity_To),      
+RBD=@RBD,      
+RBDValue=@RBDValue,      
+FlightNo=@FlightNo,      
+FlightNoValue=@FlightNoValue,      
+FareBasis=@FareBasis,      
+FareBasisValue=@FareBasisValue,      
+FlightSeries=@FlightSeries,      
+FlightSeriesValue= @FlightSeriesValue,      
+Origin=@Origin,      
+OriginValue=@OriginValue,      
+Destination=@Destination,      
+DestinationValue=@DestinationValue,      
+AgencyNames=@AgencyNames,      
+AgentCategory=@AgentCategory,      
+AgencyId=@AgencyId,      
+Cabin=@Cabin,      
+PricingCode=@PricingCode,      
+TourCode=@TourCode,      
+Commission=@Commission,      
+IATADealType=@IATADealType,       
+IATADealPercent=@IATADealPercent,       
+PLBDealType=@PLBDealType,       
+PLBDealPercent =@PLBDealPercent,      
+CRSType=@CRSType,      
+AvailabilityPCC=@AvailabilityPCC,      
+PNRCreationPCC=@PNRCreationPCC,      
+TicketingPCC=@TicketingPCC,      
+IATADiscountType=@IATADiscountType,      
+PLBDiscountType=@PLBDiscountType,      
+CardMapping1=@CardMapping1,      
+CardMapping2=@CardMapping2,      
+CardMapping3=@CardMapping3,      
+CardMapping4=@CardMapping4,      
+CardMapping5=@CardMapping5,      
+Endorsementline=@Endorsementline,      
+UpdatedBy=@UserID,      
+UpdatedDate=GETDATE() ,      
+FareType=@FareType,      
+MarkupType=@MarkupType ,      
+MarkupAmount=@MarkupAmount ,      
+MarkupDealType=@MarkupDealType,      
+PaxType=@PaxType,      
+DropnetCommission=@DropNetCommission,      
+LoginId=@LoginId,      
+VirtualCardName=@VCName,      
+PayMode=@Paymode,    
+GST=@GST,    
+TDS=@TDS,  
+GDSDiscountType=@GDSDiscountType,  
+GDSDealType=@GDSDealType,  
+AirlineType=@AirLineCode,
+GDSCommission=@GDSCommission,
+AdditionalAmount=@AdditionalAmount,
+AdditionalAmtType=@AdditionalAmtType,
+NetRemitCode=@NetRemitCode,
+     [Discounttype]=@Discounttype,
+	  [Percentage]=@Percentage
+      ,[LimitValue]=@LimitValue
+      ,[Currency]=@Currency
+      ,[HUP_Amount]=@Hup_Amt
+      ,[FromValue]=@Fromval
+      ,[ToValue]=@Toval
+	  ,AutoTicketing=@AutoTkt,
+Queueno=@Queueno,
+EmailId=@EmailId,
+TicketingAccess=@TktAccess,
+OTP=@OTP,
+SOTO=@SOTO,
+OriginCountry=@OriginCountry,
+DestinationCountry=@DestinationCountry,
+AgentLogin=@AgentLogin ,
+Password=@Password ,
+IATA=@IATA,
+AgentIdentifier=@AgentIdentifier,
+ViaPoint=@ViaPoint,
+ViaPointValue=@ViaPointValue
+where ID = @ID      
+      
+      
+      
+end
+
+GO
+GRANT VIEW DEFINITION
+    ON OBJECT::[dbo].[UpdateFM] TO [rt_read]
+    AS [dbo];
+

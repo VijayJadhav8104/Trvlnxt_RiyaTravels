@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[Conti_Country] (
+    [Id]               INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Continent_Id]     INT            NULL,
+    [CountryName]      NVARCHAR (50)  NULL,
+    [Adjective]        NVARCHAR (MAX) NULL,
+    [Rate]             FLOAT (53)     NULL,
+    [Image]            NVARCHAR (MAX) NULL,
+    [Banner_Image]     NVARCHAR (MAX) NULL,
+    [Description]      NVARCHAR (MAX) NULL,
+    [Url]              NVARCHAR (MAX) NULL,
+    [UrlStructure]     NVARCHAR (MAX) NULL,
+    [MetaTitle]        NVARCHAR (MAX) NULL,
+    [MetaDescription]  NVARCHAR (MAX) NULL,
+    [Keywords]         NVARCHAR (MAX) NULL,
+    [Date]             DATETIME       NULL,
+    [IsActive]         BIT            NULL,
+    [GoogleAnalytics]  NVARCHAR (MAX) NULL,
+    [CurrentTimeStamp] DATETIME       NULL,
+    [U_id]             INT            NULL,
+    [LastModifiedDate] DATETIME       NULL,
+    [ModifiedBy]       INT            NULL,
+    [AltTag]           NVARCHAR (MAX) NULL,
+    [DisplayOrder]     INT            NULL,
+    CONSTRAINT [PK_Conti_Country] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

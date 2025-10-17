@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[tblB2CTrackingDetails] (
+    [ID]                INT           IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [ContactNo]         VARCHAR (50)  NULL,
+    [OrderId]           VARCHAR (50)  NULL,
+    [EmailId]           VARCHAR (100) NULL,
+    [frmSector]         VARCHAR (50)  NOT NULL,
+    [toSector]          VARCHAR (50)  NOT NULL,
+    [depDate]           DATETIME      NULL,
+    [dashboard_Action]  INT           NOT NULL,
+    [dashboard_Remarks] VARCHAR (MAX) NULL,
+    [IP]                VARCHAR (50)  NULL,
+    [CreatedBy]         VARCHAR (100) NULL,
+    [Modifyby]          VARCHAR (100) NULL,
+    [CreatedDate]       DATETIME      NULL,
+    [UpdatedDate]       DATETIME      NULL,
+    [IsDelete]          BIT           NULL,
+    [PNR]               VARCHAR (50)  NULL,
+    [Status]            VARCHAR (50)  NULL,
+    [Airline]           VARCHAR (100) NULL,
+    [Country]           VARCHAR (10)  NULL,
+    [BookingDate]       DATETIME      NULL,
+    [GUID]              VARCHAR (100) NULL,
+    CONSTRAINT [PK_tblBookDetails] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

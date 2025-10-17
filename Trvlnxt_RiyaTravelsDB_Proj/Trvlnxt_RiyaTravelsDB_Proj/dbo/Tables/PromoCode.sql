@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[PromoCode] (
+    [Pk_Id]             BIGINT        IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [AirCode]           VARCHAR (20)  NULL,
+    [FareType]          VARCHAR (50)  CONSTRAINT [DF_PromoCode_FareType] DEFAULT ('D-Domastic, I-International') NULL,
+    [salesFrm_date]     DATETIME      NULL,
+    [salesTo_date]      DATETIME      NULL,
+    [travelFrm_date]    DATE          NULL,
+    [travelTo_date]     DATE          NULL,
+    [SectorIncludeFrom] VARCHAR (500) NULL,
+    [SectorIncludeTo]   VARCHAR (500) NULL,
+    [SectorExcludeFrom] VARCHAR (500) NULL,
+    [SectorExcludeTo]   VARCHAR (500) NULL,
+    [MinFareAmount]     INT           NULL,
+    [Discount]          INT           NULL,
+    [Remark]            VARCHAR (500) NULL,
+    [UserType]          TINYINT       NULL,
+    [PromoType]         TINYINT       NULL,
+    [IncludeFlat]       TINYINT       NULL,
+    [PromoCode]         VARCHAR (50)  NULL,
+    [insertDate]        DATE          CONSTRAINT [DF_PromoCode_insertDate] DEFAULT (getdate()) NULL,
+    [userID]            BIGINT        NULL,
+    [modifiedDate]      DATE          NULL,
+    [ModifiedBy]        INT           NULL,
+    [IsActive]          CHAR (10)     CONSTRAINT [DF_PromoCode_IsActive] DEFAULT ((1)) NULL,
+    [GST]               INT           NULL,
+    CONSTRAINT [PK_PromoCode] PRIMARY KEY CLUSTERED ([Pk_Id] ASC)
+);
+

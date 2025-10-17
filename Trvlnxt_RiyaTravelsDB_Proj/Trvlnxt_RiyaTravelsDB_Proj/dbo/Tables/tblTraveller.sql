@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[tblTraveller] (
+    [TravellerID]        BIGINT        IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Title]              VARCHAR (20)  NULL,
+    [FirstName]          VARCHAR (150) NULL,
+    [MiddleName]         VARCHAR (150) NULL,
+    [LastName]           VARCHAR (150) NULL,
+    [NickName]           VARCHAR (150) NULL,
+    [AlternateEmailID]   VARCHAR (50)  NULL,
+    [MobileNumber]       VARCHAR (20)  NULL,
+    [Address]            VARCHAR (500) NULL,
+    [Address1]           VARCHAR (500) NULL,
+    [City]               VARCHAR (100) NULL,
+    [Country]            VARCHAR (100) NULL,
+    [Pincode]            VARCHAR (10)  NULL,
+    [Province]           VARCHAR (50)  NULL,
+    [DateOfBirth]        DATETIME      NULL,
+    [PassportNumber]     VARCHAR (50)  NULL,
+    [IssuingCountry]     VARCHAR (50)  NULL,
+    [PassportExpiryDate] DATETIME      NULL,
+    [NewsLetters1]       BIT           NULL,
+    [NewsLetters2]       BIT           NULL,
+    [UserID]             INT           NULL,
+    [DeleteFlag]         BIT           NULL,
+    CONSTRAINT [PK_tblTraveller] PRIMARY KEY CLUSTERED ([TravellerID] ASC)
+);
+

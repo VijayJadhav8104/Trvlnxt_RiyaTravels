@@ -1,0 +1,25 @@
+﻿CREATE TABLE [Rail].[tbl_ServiceFee] (
+    [Id]                      INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [MarketPoint]             VARCHAR (30)   NULL,
+    [UserType]                VARCHAR (30)   NULL,
+    [IssuanceFrom]            SMALLDATETIME  NULL,
+    [IssuanceTo]              SMALLDATETIME  NULL,
+    [Origin]                  VARCHAR (30)   NULL,
+    [Destination]             VARCHAR (30)   NULL,
+    [GST]                     VARCHAR (30)   NULL,
+    [BookingType]             INT            NULL,
+    [ServiceType]             VARCHAR (50)   NULL,
+    [isActive]                BIT            NULL,
+    [CreatedDate]             SMALLDATETIME  NULL,
+    [ModifiedDate]            SMALLDATETIME  NULL,
+    [CreatedBy]               VARCHAR (50)   NULL,
+    [ModifyBy]                VARCHAR (50)   NULL,
+    [AgentId]                 VARCHAR (500)  NULL,
+    [Fk_SupplierMasterId]     VARCHAR (20)   NULL,
+    [BookingFee]              DECIMAL (8, 2) NULL,
+    [AgencyName]              VARCHAR (500)  NULL,
+    [Mark_Up_On_Booking_Fees] DECIMAL (8, 2) NULL,
+    [Tax_on_Booking_Fees]     DECIMAL (8, 2) NULL,
+    CONSTRAINT [PK_tbl_ServiceFee] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

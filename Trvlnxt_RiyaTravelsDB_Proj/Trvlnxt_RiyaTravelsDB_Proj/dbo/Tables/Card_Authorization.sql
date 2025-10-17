@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[Card_Authorization] (
+    [Id]                             INT           IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [PaymentType]                    VARCHAR (50)  NULL,
+    [Booking_Reference_No]           VARCHAR (50)  NULL,
+    [NameOfSalesPerson]              VARCHAR (50)  NULL,
+    [CustomerName]                   VARCHAR (100) NULL,
+    [CardHolderName]                 VARCHAR (100) NULL,
+    [CardNo]                         VARCHAR (50)  NULL,
+    [Card_Expiry]                    VARCHAR (50)  NULL,
+    [Ticketed_Amount]                VARCHAR (50)  NULL,
+    [NameOfPaxOtherCard]             VARCHAR (500) NULL,
+    [BillingAddress]                 VARCHAR (500) NULL,
+    [WorkPhone_No]                   VARCHAR (20)  NULL,
+    [HomePhone_No]                   VARCHAR (20)  NULL,
+    [Mobile_No]                      VARCHAR (20)  NULL,
+    [EmailId]                        VARCHAR (100) NULL,
+    [DriveryLicence_No]              VARCHAR (50)  NULL,
+    [BookingCountry]                 VARCHAR (50)  NULL,
+    [State]                          VARCHAR (50)  NULL,
+    [Uploaded_DocumentPath]          VARCHAR (500) NULL,
+    [dtSubmittedDate]                DATETIME      NOT NULL,
+    [Browser]                        VARCHAR (50)  NULL,
+    [IP]                             VARCHAR (50)  NULL,
+    [Device]                         VARCHAR (50)  NULL,
+    [RelationshipOfPaxOtherThenCard] VARCHAR (100) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

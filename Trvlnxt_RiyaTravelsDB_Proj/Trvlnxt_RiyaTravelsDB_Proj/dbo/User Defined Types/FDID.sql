@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[FDID] AS TABLE (
+    [PKId] BIGINT NULL);
+

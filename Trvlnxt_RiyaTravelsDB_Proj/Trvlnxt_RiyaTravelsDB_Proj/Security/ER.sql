@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [ER]
+    AUTHORIZATION [RiyaTravels];
+

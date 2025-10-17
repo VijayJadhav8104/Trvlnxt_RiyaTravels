@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Airlinename] (
+    [_CODE]      NVARCHAR (255) NULL,
+    [_NAME]      NVARCHAR (255) NULL,
+    [AIRPORT_ID] NVARCHAR (255) NULL,
+    [_CATEGORY]  NVARCHAR (255) NULL
+);
+

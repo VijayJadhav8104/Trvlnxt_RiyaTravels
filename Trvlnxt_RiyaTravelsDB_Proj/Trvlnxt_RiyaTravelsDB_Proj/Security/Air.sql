@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Air]
+    AUTHORIZATION [DB_TEST];
+

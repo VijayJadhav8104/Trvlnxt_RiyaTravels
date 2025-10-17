@@ -1,0 +1,126 @@
+﻿GRANT VIEW ANY COLUMN ENCRYPTION KEY DEFINITION TO PUBLIC;
+
+
+GO
+GRANT VIEW ANY COLUMN MASTER KEY DEFINITION TO PUBLIC;
+
+
+GO
+GRANT CONNECT TO [MarineTool];
+
+
+GO
+GRANT CONNECT TO [WinYatra];
+
+
+GO
+GRANT CONNECT TO [Marine];
+
+
+GO
+GRANT CONNECT TO [RiyaTravels];
+
+
+GO
+GRANT CONNECT TO [riyauser];
+
+
+GO
+GRANT CONNECT TO [DB_TEST];
+
+
+GO
+GRANT CONNECT TO [visatracker];
+
+
+GO
+GRANT CONNECT TO [Dashboard_SkyView];
+
+
+GO
+GRANT CONNECT TO [trvlnxt];
+
+
+GO
+GRANT CONNECT TO [DSR_ERP];
+
+
+GO
+GRANT CONNECT TO [mahesh];
+
+
+GO
+GRANT CONNECT TO [rttest];
+
+
+GO
+GRANT CONNECT TO [rt_read];
+
+
+GO
+GRANT EXECUTE TO [rt_read];
+
+
+GO
+GRANT CONNECT TO [ViewOnly];
+
+
+GO
+GRANT VIEW DEFINITION TO [ViewOnly];
+
+
+GO
+GRANT CONNECT TO [Akshay];
+
+
+GO
+GRANT CONNECT TO [dbariya];
+
+
+GO
+GRANT CONNECT TO [ROE];
+
+
+GO
+GRANT CONNECT TO [MarineTool_LnkS];
+
+
+GO
+GRANT CONTROL
+    ON SCHEMA::[dbo] TO [RiyaTravels];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[dbo] TO [RiyaTravels];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[dbo] TO [RiyaTravels];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[dbo] TO [RiyaTravels];
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[dbo] TO [RiyaTravels];
+
+
+GO
+DENY ALTER
+    ON SCHEMA::[dbo] TO [rttest];
+
+
+GO
+GRANT CONTROL
+    ON SCHEMA::[dbo] TO [rttest];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[dbo] TO [rttest];
+

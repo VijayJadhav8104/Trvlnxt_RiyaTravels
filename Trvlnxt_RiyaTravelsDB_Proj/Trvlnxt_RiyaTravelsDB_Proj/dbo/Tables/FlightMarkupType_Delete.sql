@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[FlightMarkupType_Delete] (
+    [ID]                 INT             IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [MarketPoint]        VARCHAR (30)    NULL,
+    [AirportType]        VARCHAR (50)    NULL,
+    [AirlineType]        VARCHAR (10)    NULL,
+    [PaxType]            VARCHAR (50)    NULL,
+    [Remark]             VARCHAR (MAX)   NULL,
+    [OnBasic]            NUMERIC (18, 2) NULL,
+    [OnTax]              NUMERIC (18, 2) NULL,
+    [TravelValidityFrom] DATETIME        NULL,
+    [TravelValidityTo]   DATETIME        NULL,
+    [SaleValidityFrom]   DATETIME        NULL,
+    [SaleValidityTo]     DATETIME        NULL,
+    [InsertedDate]       DATETIME        NULL,
+    [GroupType]          VARCHAR (50)    NULL,
+    [Name]               VARCHAR (100)   NULL,
+    [DeletedDate]        DATETIME        NULL,
+    [DeletedBy]          VARCHAR (50)    NULL,
+    [FareTypeRU]         VARCHAR (50)    NULL,
+    [CalculationTypeRU]  VARCHAR (50)    NULL,
+    [ValPerRU]           NUMERIC (18, 2) NULL,
+    [FareTypeRP]         VARCHAR (50)    NULL,
+    [CalculationTypeRP]  VARCHAR (50)    NULL,
+    [ValPerRP]           NUMERIC (18, 2) NULL,
+    CONSTRAINT [PK_FlightMarkupType_Delete] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

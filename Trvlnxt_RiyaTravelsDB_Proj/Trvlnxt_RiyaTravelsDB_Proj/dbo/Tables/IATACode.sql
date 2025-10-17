@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[IATACode] (
+    [ID]         INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [CommonCode] NVARCHAR (255) NULL,
+    [CODE]       NVARCHAR (255) NULL,
+    [CITY]       NVARCHAR (255) NULL,
+    [AIRPORT]    NVARCHAR (255) NULL,
+    [COUNTRY]    NVARCHAR (255) NULL,
+    [No]         FLOAT (53)     NULL,
+    CONSTRAINT [PK_IATACode] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

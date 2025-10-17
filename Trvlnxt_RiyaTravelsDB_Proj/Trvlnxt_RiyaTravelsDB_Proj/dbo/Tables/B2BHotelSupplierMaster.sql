@@ -1,0 +1,58 @@
+﻿CREATE TABLE [dbo].[B2BHotelSupplierMaster] (
+    [Id]                       INT             IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [SupplierName]             NVARCHAR (300)  NULL,
+    [SupplierType]             NVARCHAR (300)  NULL,
+    [Username]                 NVARCHAR (200)  NULL,
+    [Password]                 NVARCHAR (500)  NULL,
+    [FirstName]                NVARCHAR (300)  NULL,
+    [MiddleName]               NVARCHAR (300)  NULL,
+    [LastName]                 NVARCHAR (300)  NULL,
+    [Address]                  NVARCHAR (MAX)  NULL,
+    [Country]                  INT             NULL,
+    [City]                     INT             NULL,
+    [PinCode]                  NVARCHAR (300)  NULL,
+    [MobileNumber]             NVARCHAR (300)  NULL,
+    [Email]                    NVARCHAR (300)  NULL,
+    [Commission_Net]           INT             NULL,
+    [CreateDate]               DATETIME        CONSTRAINT [DF_B2BHotelSupplierMaster_CreateDate] DEFAULT (getdate()) NULL,
+    [CreatedBy]                INT             NULL,
+    [ModifiedOn]               DATETIME        NULL,
+    [ModifiedBy]               INT             NULL,
+    [IsActive]                 BIT             CONSTRAINT [DF_B2BHotelSupplierMaster_IsActive] DEFAULT ((1)) NULL,
+    [Action]                   BIT             NULL,
+    [pccCode]                  VARCHAR (50)    NULL,
+    [pccSupplierName]          VARCHAR (50)    NULL,
+    [IsBookNowPaylate]         VARCHAR (50)    NULL,
+    [IsRiyaAPI]                BIT             NULL,
+    [RhSupplierId]             VARCHAR (70)    NULL,
+    [IsGSTRequired]            BIT             NULL,
+    [IsPanRequired]            BIT             NULL,
+    [IsCCRequired]             BIT             NULL,
+    [SupportMailId]            VARCHAR (MAX)   NULL,
+    [VccCharges]               DECIMAL (18, 2) NULL,
+    [PayAtHotel]               BIT             NULL,
+    [SupplierCharges]          DECIMAL (18, 2) NULL,
+    [SupplierCurrency]         VARCHAR (10)    NULL,
+    [BillingCountry]           VARCHAR (50)    NULL,
+    [VirtualBalance]           DECIMAL (18, 2) NULL,
+    [Is_Req_Domestic_Pan]      BIT             CONSTRAINT [DF_B2BHotelSupplierMaster_Is_Req_Domestic_Pan] DEFAULT ((0)) NULL,
+    [Is_Req_International_Pan] BIT             CONSTRAINT [DF_B2BHotelSupplierMaster_Is_Req_International_Pan] DEFAULT ((0)) NULL,
+    [IsDelete]                 BIT             CONSTRAINT [DF_B2BHotelSupplierMaster_IsDelete] DEFAULT ((0)) NULL,
+    [IsRateCodeApplicable]     BIT             CONSTRAINT [DF_B2BHotelSupplierMaster_IsRateCodeApplicable] DEFAULT ((0)) NULL,
+    [SupplierGroup]            VARCHAR (500)   NULL,
+    [RateDisplay]              VARCHAR (200)   NULL,
+    [IsHotelContentAvail]      BIT             CONSTRAINT [DF_B2BHotelSupplierMaster_IsHotelContentAvail] DEFAULT ((0)) NULL,
+    [IsHold]                   BIT             DEFAULT ((0)) NOT NULL,
+    CONSTRAINT [PK_B2BHotelSupplierMaster] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [NonClusteredIndex-suppliername]
+    ON [dbo].[B2BHotelSupplierMaster]([SupplierName] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [idx_supplierid]
+    ON [dbo].[B2BHotelSupplierMaster]([RhSupplierId] ASC);
+

@@ -1,0 +1,89 @@
+17/10/2025 2:41:33 PM	This log contains information about the import schema operation into project 'Trvlnxt_RiyaTravelsDB_Proj' on computer 'ADHRTTITLC307' by user '23586'.
+17/10/2025 2:41:34 PM	Import of database schema has started.
+17/10/2025 2:41:48 PM	Gathering database credentials
+17/10/2025 2:41:48 PM	Gathering database options
+17/10/2025 2:41:48 PM	Gathering generic database scoped configuration option
+17/10/2025 2:41:48 PM	Gathering users
+17/10/2025 2:41:48 PM	Gathering roles
+17/10/2025 2:41:48 PM	Gathering application roles
+17/10/2025 2:41:48 PM	Gathering role memberships
+17/10/2025 2:41:48 PM	Gathering filegroups
+17/10/2025 2:41:48 PM	Gathering full-text catalogs
+17/10/2025 2:41:48 PM	Gathering assemblies
+17/10/2025 2:41:48 PM	Gathering certificates
+17/10/2025 2:41:48 PM	Gathering asymmetric keys
+17/10/2025 2:41:48 PM	Gathering symmetric keys
+17/10/2025 2:41:48 PM	Gathering encrypted symmetric keys
+17/10/2025 2:41:48 PM	Gathering schemas
+17/10/2025 2:41:48 PM	Gathering XML schema collections
+17/10/2025 2:41:48 PM	Gathering user-defined data types
+17/10/2025 2:41:48 PM	Gathering user-defined types
+17/10/2025 2:41:48 PM	Gathering table types
+17/10/2025 2:41:49 PM	Gathering unique keys for table types
+17/10/2025 2:41:49 PM	Gathering primary keys for table types
+17/10/2025 2:41:49 PM	Gathering indexes for table types
+17/10/2025 2:41:49 PM	Gathering check constraints for table types
+17/10/2025 2:41:49 PM	Gathering default constraints for table types
+17/10/2025 2:41:49 PM	Gathering partition functions
+17/10/2025 2:41:49 PM	Gathering partition schemes
+17/10/2025 2:41:49 PM	Gathering functions
+17/10/2025 2:41:49 PM	Gathering encrypted functions
+17/10/2025 2:41:49 PM	Gathering aggregates
+17/10/2025 2:41:49 PM	Gathering procedures
+17/10/2025 2:41:58 PM	Gathering encrypted procedures
+17/10/2025 2:41:58 PM	Gathering tables
+17/10/2025 2:42:01 PM	Gathering primary keys
+17/10/2025 2:42:01 PM	Gathering unique constraints
+17/10/2025 2:42:01 PM	Gathering foreign keys
+17/10/2025 2:42:01 PM	Gathering default constraints
+17/10/2025 2:42:01 PM	Gathering check constraints
+17/10/2025 2:42:01 PM	Gathering views
+17/10/2025 2:42:01 PM	Gathering encrypted views
+17/10/2025 2:42:01 PM	Gathering indexes
+17/10/2025 2:42:01 PM	Gathering statistics
+17/10/2025 2:42:01 PM	Gathering full-text index stoplists
+17/10/2025 2:42:01 PM	Gathering search property lists
+17/10/2025 2:42:01 PM	Gathering search properties
+17/10/2025 2:42:01 PM	Gathering full-text indexes
+17/10/2025 2:42:01 PM	Gathering column store indexes
+17/10/2025 2:42:01 PM	Gathering spatial indexes
+17/10/2025 2:42:01 PM	Gathering XML indexes
+17/10/2025 2:42:01 PM	Gathering Selective XML indexes
+17/10/2025 2:42:01 PM	Gathering encrypted triggers
+17/10/2025 2:42:01 PM	Gathering triggers
+17/10/2025 2:42:01 PM	Gathering encrypted and clr ddl triggers
+17/10/2025 2:42:01 PM	Gathering ddl triggers
+17/10/2025 2:42:01 PM	Creating edge constraints
+17/10/2025 2:42:01 PM	Gathering synonyms
+17/10/2025 2:42:01 PM	Gathering defaults
+17/10/2025 2:42:01 PM	Gathering data constraint uddt bindings
+17/10/2025 2:42:01 PM	Gathering rules
+17/10/2025 2:42:01 PM	Gathering data constraint uddt bindings
+17/10/2025 2:42:01 PM	Gathering message types
+17/10/2025 2:42:01 PM	Gathering queues
+17/10/2025 2:42:01 PM	Gathering contracts
+17/10/2025 2:42:01 PM	Gathering services
+17/10/2025 2:42:01 PM	Gathering event notifications
+17/10/2025 2:42:01 PM	Gathering remote service bindings
+17/10/2025 2:42:01 PM	Gathering broker priorities
+17/10/2025 2:42:01 PM	Gathering signatures
+17/10/2025 2:42:01 PM	Gathering compression options
+17/10/2025 2:42:01 PM	Gathering sequence types
+17/10/2025 2:42:01 PM	Gathering security policies
+17/10/2025 2:42:01 PM	Gather column encryption keys
+17/10/2025 2:42:01 PM	Gathering column master keys
+17/10/2025 2:42:01 PM	Gathering external data sources
+17/10/2025 2:42:01 PM	Gathering external file formats
+17/10/2025 2:42:01 PM	Gathering external tables
+17/10/2025 2:42:01 PM	Gathering XML index compression options
+17/10/2025 2:42:01 PM	Gathering database permissions
+17/10/2025 2:42:01 PM	Gathering extended properties
+17/10/2025 2:42:01 PM	Gathering assemblies
+17/10/2025 2:42:01 PM	Gathering credentials
+17/10/2025 2:42:01 PM	Gathering logins
+17/10/2025 2:42:02 PM	Gathering server audits
+17/10/2025 2:42:07 PM	Scanning project for duplicate elements
+17/10/2025 2:42:12 PM	Finished duplicate element processing
+17/10/2025 2:42:40 PM	Finished importing database.
+17/10/2025 2:42:40 PM	A summary of the import was saved to the following location: D:\MSSQL_IN_VS\Trvlnxt_RiyaTravels\Trvlnxt_RiyaTravelsDB_Proj\Trvlnxt_RiyaTravelsDB_Proj\Import Schema Logs\Trvlnxt_RiyaTravelsD_20251017091133.log
+17/10/2025 2:42:40 PM	Click Finish to continue...

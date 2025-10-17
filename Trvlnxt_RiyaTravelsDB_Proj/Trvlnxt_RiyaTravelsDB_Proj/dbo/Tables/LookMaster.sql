@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[LookMaster] (
+    [pkid]              BIGINT         IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [fromsector]        VARCHAR (50)   NULL,
+    [tosector]          VARCHAR (50)   NULL,
+    [travelDate]        DATETIME       NULL,
+    [triptype]          CHAR (1)       NULL,
+    [IP]                VARCHAR (50)   NULL,
+    [travelClass]       VARCHAR (10)   NULL,
+    [returnFrom]        VARCHAR (10)   NULL,
+    [returnTo]          VARCHAR (10)   NULL,
+    [returnDate]        DATETIME       NULL,
+    [noOfAdult]         INT            NULL,
+    [noOfChild]         INT            NULL,
+    [noOfInfant]        INT            NULL,
+    [inserteddate]      DATETIME       CONSTRAINT [DF_LookMaster_inserteddate] DEFAULT (getdate()) NULL,
+    [brawser]           VARCHAR (50)   NULL,
+    [device]            VARCHAR (50)   NULL,
+    [brawserInfo]       VARCHAR (4000) NULL,
+    [AirLinePreference] VARCHAR (100)  NULL,
+    [Stop]              VARCHAR (100)  NULL,
+    [Agent]             VARCHAR (50)   NULL,
+    [Country]           VARCHAR (2)    NULL,
+    [Source]            VARCHAR (50)   NULL,
+    [AgentIDF]          INT            NULL,
+    [StaffIDF]          INT            NULL,
+    CONSTRAINT [PK_LookMaster] PRIMARY KEY CLUSTERED ([pkid] ASC)
+);
+

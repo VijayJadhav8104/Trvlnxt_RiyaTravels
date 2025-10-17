@@ -1,0 +1,25 @@
+﻿CREATE TABLE [TR].[TR_PaxDetails] (
+    [PKId]                   INT           IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [CarId]                  INT           NULL,
+    [BookingId]              INT           NULL,
+    [Titel]                  VARCHAR (10)  NULL,
+    [Name]                   VARCHAR (50)  NULL,
+    [Surname]                VARCHAR (50)  NULL,
+    [Age]                    VARCHAR (50)  NULL,
+    [Type]                   VARCHAR (50)  NULL,
+    [PancardNo]              VARCHAR (50)  NULL,
+    [PassportNumber]         VARCHAR (50)  NULL,
+    [DateOfBirth]            DATETIME      NULL,
+    [PassportIssueDate]      DATETIME      NULL,
+    [PassportExpirationDate] DATETIME      NULL,
+    [IssuingCountry]         INT           NULL,
+    [TotalPax]               INT           NULL,
+    [PanCardName]            VARCHAR (50)  NULL,
+    [Contact]                VARCHAR (50)  NULL,
+    [Email]                  VARCHAR (500) NULL,
+    [NationalityCode]        VARCHAR (500) NULL,
+    [NationalityValue]       INT           NULL,
+    [Nationality]            VARCHAR (500) NULL,
+    CONSTRAINT [PK_TR_PaxDetails] PRIMARY KEY CLUSTERED ([PKId] ASC)
+);
+

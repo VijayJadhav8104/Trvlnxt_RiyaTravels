@@ -1,0 +1,5 @@
+﻿CREATE SEQUENCE [Hotel].[OrderNo]
+    AS INT
+    START WITH 244500
+    INCREMENT BY 1;
+

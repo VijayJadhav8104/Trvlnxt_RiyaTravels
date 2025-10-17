@@ -1,0 +1,26 @@
+﻿CREATE TABLE [Hotel].[tblApiCreditCardDeatils] (
+    [Id]             INT             IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [BookingId]      VARCHAR (80)    NULL,
+    [Email]          VARCHAR (100)   NULL,
+    [Phone]          VARCHAR (50)    NULL,
+    [BillingAddress] VARCHAR (MAX)   NULL,
+    [NameOnCard]     VARCHAR (100)   NULL,
+    [number]         VARCHAR (200)   NULL,
+    [ExpiryMonth]    INT             NULL,
+    [ExpiryYear]     INT             NULL,
+    [Cvv]            INT             NULL,
+    [IsUser]         VARCHAR (50)    NULL,
+    [InsertedDate]   DATETIME        NULL,
+    [Amount]         VARCHAR (100)   NULL,
+    [Currency]       VARCHAR (50)    NULL,
+    [CardType]       VARCHAR (150)   NULL,
+    [vccCardStatus]  VARCHAR (20)    NULL,
+    [VCCCancelDate]  DATETIME        NULL,
+    [VCCReissueDate] DATETIME        NULL,
+    [VCCModifiedBy]  VARCHAR (100)   NULL,
+    [remark]         VARCHAR (MAX)   NULL,
+    [response]       VARCHAR (MAX)   NULL,
+    [AppliedRoe]     DECIMAL (18, 3) NULL,
+    CONSTRAINT [PK_tblApiCreditCardDeatils] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

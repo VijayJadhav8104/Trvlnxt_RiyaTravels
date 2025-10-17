@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[BlogMaster] (
+    [Id]               INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Country]          VARCHAR (50)   NULL,
+    [Url]              NVARCHAR (MAX) NULL,
+    [MetaTitle]        NVARCHAR (MAX) NULL,
+    [Description]      NVARCHAR (MAX) NULL,
+    [Keywords]         NVARCHAR (MAX) NULL,
+    [BlogTDImage]      VARCHAR (MAX)  NULL,
+    [BlogThumbnail]    VARCHAR (MAX)  NULL,
+    [BlogOrder]        NVARCHAR (MAX) NULL,
+    [InsertDate]       DATETIME       NULL,
+    [TagName]          NVARCHAR (MAX) NULL,
+    [Author]           NVARCHAR (MAX) NULL,
+    [Headline]         NVARCHAR (MAX) NULL,
+    [SubHeadline]      NVARCHAR (MAX) NULL,
+    [CoverImage]       NVARCHAR (MAX) NULL,
+    [BlogInduction]    NVARCHAR (MAX) NULL,
+    [Head]             NVARCHAR (MAX) NULL,
+    [SubHead]          NVARCHAR (MAX) NULL,
+    [PointDescription] NVARCHAR (MAX) NULL,
+    [PointImage]       NVARCHAR (MAX) NULL,
+    [Preview_Flag]     NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_BlogMaster] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[RescheduleData] (
+    [Id]                    INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Pid]                   NVARCHAR (100) NULL,
+    [Pkid]                  NVARCHAR (100) NULL,
+    [FlightNo]              NVARCHAR (50)  NULL,
+    [Origin]                NVARCHAR (20)  NULL,
+    [Destination]           NVARCHAR (20)  NULL,
+    [DepartureDate]         NVARCHAR (50)  NULL,
+    [Class]                 NVARCHAR (50)  NULL,
+    [RescheduleDate]        NVARCHAR (50)  NULL,
+    [RescheduleClass]       NVARCHAR (50)  NULL,
+    [RescheduleFlightNo]    NVARCHAR (50)  NULL,
+    [ContactNo]             NVARCHAR (50)  NULL,
+    [Email]                 NVARCHAR (50)  NULL,
+    [Remarks]               NVARCHAR (500) NULL,
+    [Status]                INT            NULL,
+    [RescheduleBackEnduser] INT            NULL,
+    [ReschedulebyAgency]    INT            NULL,
+    [OrderId]               NVARCHAR (50)  NULL,
+    [CreatedDate]           DATETIME       NULL,
+    [RiyaPNR]               NVARCHAR (50)  NULL,
+    [NewPKid]               INT            NULL,
+    [IsReturnJourney]       VARCHAR (10)   NULL,
+    CONSTRAINT [PK_RescheduleData] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

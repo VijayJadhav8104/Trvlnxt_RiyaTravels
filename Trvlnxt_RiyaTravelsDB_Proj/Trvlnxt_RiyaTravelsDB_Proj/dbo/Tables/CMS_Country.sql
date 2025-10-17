@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CMS_Country] (
+    [PKID_int] BIGINT       IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [name_vc]  VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Country] PRIMARY KEY CLUSTERED ([PKID_int] ASC)
+);
+

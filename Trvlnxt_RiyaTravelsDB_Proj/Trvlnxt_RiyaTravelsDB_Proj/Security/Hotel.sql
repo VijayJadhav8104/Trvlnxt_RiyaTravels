@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Hotel]
+    AUTHORIZATION [DB_TEST];
+

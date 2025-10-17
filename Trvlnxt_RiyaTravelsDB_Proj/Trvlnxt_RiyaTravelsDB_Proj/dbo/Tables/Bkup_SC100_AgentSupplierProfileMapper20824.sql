@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[Bkup_SC100_AgentSupplierProfileMapper20824] (
+    [Id]                        INT             IDENTITY (1, 1) NOT NULL,
+    [AgentId]                   INT             NULL,
+    [SupplierId]                INT             NULL,
+    [ProfileId]                 INT             NULL,
+    [CancellationHours]         INT             NULL,
+    [CreateDate]                DATETIME        NULL,
+    [IsActive]                  BIT             NULL,
+    [PriceOptimizationOn]       VARCHAR (100)   NULL,
+    [CorporateCode]             VARCHAR (20)    NULL,
+    [IsActiveCorporateCode]     BIT             NULL,
+    [Channelid]                 VARCHAR (50)    NULL,
+    [IsGSTRequired]             BIT             NULL,
+    [IsPanRequired]             BIT             NULL,
+    [Servicecharge]             FLOAT (53)      NULL,
+    [GSTOnServiceCharge]        FLOAT (53)      NULL,
+    [RateCode]                  VARCHAR (MAX)   NULL,
+    [IATA]                      VARCHAR (50)    NULL,
+    [PCC]                       VARCHAR (50)    NULL,
+    [ServicePercent]            FLOAT (53)      NULL,
+    [AgentCurrency]             VARCHAR (10)    NULL,
+    [Service_charge_onAgent]    DECIMAL (18, 2) NULL,
+    [GstService_charge_onAgent] DECIMAL (18, 2) NULL,
+    [Createdby]                 INT             NULL,
+    [IsRateCodeRequired]        BIT             NULL,
+    [IsPccRequired]             BIT             NULL
+);
+

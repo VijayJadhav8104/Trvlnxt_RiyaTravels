@@ -1,0 +1,26 @@
+﻿CREATE TABLE [SS].[tbl_SS_Discount] (
+    [Id]                 INT             IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [MarketPoint]        VARCHAR (30)    NULL,
+    [UserType]           VARCHAR (30)    NULL,
+    [TravelValidityFrom] DATETIME        NULL,
+    [TravelValidityTo]   DATETIME        NULL,
+    [SaleValidityFrom]   DATETIME        NULL,
+    [SaleValidityTo]     DATETIME        NULL,
+    [GST]                VARCHAR (30)    NULL,
+    [BookingType]        INT             NULL,
+    [Currency]           VARCHAR (10)    NULL,
+    [isActive]           BIT             NULL,
+    [CreatedDate]        DATETIME        NULL,
+    [ModifiedDate]       DATETIME        NULL,
+    [CreatedBy]          NVARCHAR (50)   NULL,
+    [ModifyBy]           NVARCHAR (50)   NULL,
+    [SupplierType]       VARCHAR (50)    NULL,
+    [AgentId]            VARCHAR (200)   NULL,
+    [TDS]                DECIMAL (18, 2) NULL,
+    [ServiceType]        VARCHAR (50)    NULL,
+    [TimeSlotFrom]       VARCHAR (10)    NULL,
+    [TimeSlotTo]         VARCHAR (10)    NULL,
+    [ReservationType]    VARCHAR (10)    NULL,
+    CONSTRAINT [PK_tbl_SS_Discount] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

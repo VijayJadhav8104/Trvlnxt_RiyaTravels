@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[mFareRule] (
+    [ID]                 INT           IDENTITY (1, 1) NOT NULL,
+    [UserType]           VARCHAR (50)  NULL,
+    [Country]            VARCHAR (50)  NULL,
+    [VendorID]           INT           NULL,
+    [Officeid]           VARCHAR (50)  NULL,
+    [FareName]           VARCHAR (200) NULL,
+    [FareRule]           VARCHAR (MAX) NULL,
+    [CreatedOn]          DATETIME      NULL,
+    [CreatedBy]          INT           NULL,
+    [ModifiedBy]         INT           NULL,
+    [ModifiedOn]         DATETIME      NULL,
+    [IsActive]           INT           NULL,
+    [VendorName]         VARCHAR (200) NULL,
+    [IsDelete]           INT           NULL,
+    [Origin]             BIT           CONSTRAINT [DF_mFareRule_Origin] DEFAULT ((0)) NULL,
+    [OriginValue]        VARCHAR (MAX) NULL,
+    [Destination]        BIT           CONSTRAINT [DF_mFareRule_Destination] DEFAULT ((0)) NULL,
+    [DestinationValue]   VARCHAR (MAX) NULL,
+    [OriginCountry]      VARCHAR (MAX) NULL,
+    [DestinationCountry] VARCHAR (MAX) NULL,
+    [Cabin]              VARCHAR (MAX) NULL,
+    [AirportType]        VARCHAR (10)  NULL,
+    CONSTRAINT [PK_mFareRule] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[mUserHistory] (
+    [ID]               INT             IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Action]           VARCHAR (10)    NOT NULL,
+    [FullName]         VARCHAR (50)    NOT NULL,
+    [UserName]         VARCHAR (50)    NOT NULL,
+    [MobileNo]         VARCHAR (15)    NOT NULL,
+    [EmailID]          VARCHAR (100)   NOT NULL,
+    [LocationID]       INT             NOT NULL,
+    [DepartmentID]     INT             NOT NULL,
+    [CountryID]        VARCHAR (50)    NOT NULL,
+    [EmployeeNo]       VARCHAR (20)    NOT NULL,
+    [RoleID]           INT             NOT NULL,
+    [UserTypeID]       VARCHAR (50)    NOT NULL,
+    [ModifiedBy]       INT             NOT NULL,
+    [ModifiedOn]       DATETIME        CONSTRAINT [DF_mUserHistory_ModifiedOn] DEFAULT (getdate()) NOT NULL,
+    [AgentBalance]     DECIMAL (18, 3) NULL,
+    [AutoTicketing]    BIT             NULL,
+    [SelfBalance]      BIT             CONSTRAINT [DF_mUserHistory_SelfBalance] DEFAULT ((0)) NULL,
+    [CancelRequest]    BIT             CONSTRAINT [DF_mUserHistory_CancelRequest] DEFAULT ((0)) NULL,
+    [GhostTrack]       BIT             CONSTRAINT [DF_mUserHistory_GhostTrack] DEFAULT ((0)) NOT NULL,
+    [NewSelfBalance]   BIT             NULL,
+    [LoginFromCountry] VARCHAR (MAX)   NULL,
+    CONSTRAINT [PK_mUserHistory] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

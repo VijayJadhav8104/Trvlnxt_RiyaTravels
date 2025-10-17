@@ -1,0 +1,92 @@
+﻿CREATE PROCEDURE [dbo].[GetAttrributesDetailsForPassenger]
+	@GDSPNR varchar(50)            
+AS            
+BEGIN            
+
+	SELECT            
+	OrderID,            
+	GDSPNR,            
+	JobCodeBookingGivenBy,            
+	VesselName,            
+	ReasonofTravel,            
+	TravelRequestNumber,            
+	CostCenter,            
+	BudgetCode,            
+	EmpDimession,            
+	SwonNo,            
+	TravelerType,            
+	Location,            
+	Department,            
+	Grade,            
+	Bookedby,            
+	Designation,            
+	Chargeability,            
+	NameofApprover,            
+	ReferenceNo,            
+	TR_POName,            
+	RankNo,            
+	AType,            
+	BookingReceivedDate,
+	paxvisa,
+	CreatedOn,    
+	Changedcostno,    
+	Travelduration,    
+	TASreqno,    
+	Companycodecc,    
+	Projectcode,    
+	Traveltype,    
+	CreatedBy,OBTCno,
+	PanCardno,	
+	LOWEST_LOGICAL_FARE_1,
+	LOWEST_LOGICAL_FARE_2,
+	LOWEST_LOGICAL_FARE_3,
+	DEVIATION_APPROVER_NAME_AND_EMPCODE,
+	ISNULL(OUNameIDF,0) AS OUNameIDF,
+	RoleBand,
+	EmpLocation,
+	Vertical,
+	VerticalLocation,
+	Horizontal,
+	BTANO,
+	RequestID,
+	fkPassengerid,
+	PaxName,
+	SectorNo,
+	FareType,
+	FareRule,
+	Remarks,
+	CarbonFootprint,
+	CurrencyConversionRate
+	,PID
+	,Account
+	,UID
+	,ProjectName
+	,CostCentre
+	,ConcurID
+	,ApproverName
+	,GESSRECEIVEDDATE
+	,TicketType
+	,EmpIDTRAVELOFFICER
+	,DEVIATIONAPPROVER
+	,EMPLOYEESPOSITION
+	,TRAVELCOSTREIMBURSABLE
+	,BillingEntityName
+	,Issuancedate
+	,TripPurpose
+	,ProjectNo
+	,TravelReason
+	,Project_Code
+	,TravelExpenseType
+	,CartNumber
+	,CartStatus
+	,BookedByName
+	,TypeofTransaction
+	,SBU
+	,PurposeofTravel
+	,InternalOrder
+	,ServiceRequestID
+	,TripID
+	FROM mAttrributesDetails 
+	WHERE GDSPNR = @GDSPNR 
+	ORDER BY ID DESC            
+END

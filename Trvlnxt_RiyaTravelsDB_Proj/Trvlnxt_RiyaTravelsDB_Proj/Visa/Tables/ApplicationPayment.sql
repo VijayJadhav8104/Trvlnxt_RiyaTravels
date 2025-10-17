@@ -1,0 +1,26 @@
+﻿CREATE TABLE [Visa].[ApplicationPayment] (
+    [ApplicationPaymentId] BIGINT          IDENTITY (1, 1) NOT NULL,
+    [fk_AppId]             BIGINT          NULL,
+    [VisaFees]             DECIMAL (18, 2) NULL,
+    [VFSFees]              DECIMAL (18, 2) NULL,
+    [GST]                  DECIMAL (18, 2) NULL,
+    [ServiceCharges]       DECIMAL (18, 2) NULL,
+    [Processing_Fee]       DECIMAL (18, 2) NULL,
+    [TotalAmount]          DECIMAL (18, 2) NULL,
+    [OrderId]              NVARCHAR (100)  NULL,
+    [PaymentStatus]        INT             NULL,
+    [PaymentStatusText]    NVARCHAR (20)   NULL,
+    [PaymentMode]          INT             NULL,
+    [PaymentModeText]      NVARCHAR (20)   NULL,
+    [FailureMessage]       NVARCHAR (200)  NULL,
+    [ReceiptNo]            NVARCHAR (50)   NULL,
+    [ReceiptDate]          NVARCHAR (50)   NULL,
+    [PGTransactionNo]      NVARCHAR (50)   NULL,
+    [CreatedBy]            BIGINT          NULL,
+    [CreatedDate]          DATETIME        NULL,
+    [UpdatedDate]          DATETIME        NULL,
+    [Markup]               DECIMAL (18, 2) NULL,
+    [Discount]             DECIMAL (18, 2) NULL,
+    CONSTRAINT [ApplicationPaymentId] PRIMARY KEY CLUSTERED ([ApplicationPaymentId] ASC)
+);
+
