@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Trvlnxt_local</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{7b32bb6a-16c8-4895-92ea-a52c029f54d9}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Trvlnxt_local</RootNamespace>
+    <AssemblyName>Trvlnxt_local</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Hotel\" />
+    <Folder Include="Hotel\Tables\" />
+    <Folder Include="SS\" />
+    <Folder Include="SS\Tables\" />
+    <Folder Include="Test\" />
+    <Folder Include="Test\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Hotel\Stored Procedures\" />
+    <Folder Include="Hotel\Sequences\" />
+    <Folder Include="Test\Sequences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\APIDataStoreHotel.sql" />
+    <Build Include="dbo\Tables\APISessionLog.sql" />
+    <Build Include="dbo\Tables\b2cExceptionDetails.sql" />
+    <Build Include="dbo\Tables\CacheAPISession.sql" />
+    <Build Include="dbo\Tables\CacheLogs.sql" />
+    <Build Include="dbo\Tables\cachelogs_test.sql" />
+    <Build Include="dbo\Tables\ExtServicelogs.sql" />
+    <Build Include="dbo\Tables\HotelAPI_RequestResponsetbl.sql" />
+    <Build Include="dbo\Tables\HotelApiLogs.sql" />
+    <Build Include="dbo\Tables\HotelB2BRequestResponseLogs.sql" />
+    <Build Include="dbo\Tables\HotelCacheData.sql" />
+    <Build Include="dbo\Tables\LFS_Passive_Exception_log.sql" />
+    <Build Include="dbo\Tables\mAllApiExceptionLogs_Hotel.sql" />
+    <Build Include="dbo\Tables\Marine_TJQ_PNRRetriveLogsAir.sql" />
+    <Build Include="dbo\Tables\mExceptionDetails.sql" />
+    <Build Include="dbo\Tables\mExceptionDetails_Cliq.sql" />
+    <Build Include="dbo\Tables\mExceptionDetails_marine.sql" />
+    <Build Include="dbo\Tables\mExceptionDetails_marine_TJQ.sql" />
+    <Build Include="dbo\Tables\mExceptionInfoHotel.sql" />
+    <Build Include="dbo\Tables\mLogs.sql" />
+    <Build Include="dbo\Tables\MonitorPort.sql" />
+    <Build Include="dbo\Tables\NewERPData_Log.sql" />
+    <Build Include="dbo\Tables\nontest.sql" />
+    <Build Include="dbo\Tables\PNRRetriveLogsAir.sql" />
+    <Build Include="dbo\Tables\tblBookingLogsAir.sql" />
+    <Build Include="dbo\Tables\tbltrackErrorLog.sql" />
+    <Build Include="dbo\Tables\testing.sql" />
+    <Build Include="dbo\Tables\TrvlnxtAir_mExceptionDetails.sql" />
+    <Build Include="Hotel\Tables\CacheItems.sql" />
+    <Build Include="Hotel\Tables\CachingApiLogs.sql" />
+    <Build Include="Hotel\Tables\CachingApiLogs_07042025.sql" />
+    <Build Include="Hotel\Tables\HotelApiBookingLogs.sql" />
+    <Build Include="Hotel\Tables\OptimizedCity.sql" />
+    <Build Include="Hotel\Tables\PNRRetriveLogsHotel.sql" />
+    <Build Include="Hotel\Tables\tbl_API_SoldOut_Room_Blocking.sql" />
+    <Build Include="SS\Tables\ActivityApiLogs.sql" />
+    <Build Include="SS\Tables\SighseeingCacheData.sql" />
+    <Build Include="Test\Tables\Orders.sql" />
+    <Build Include="Security\riyatravels.sql" />
+    <Build Include="Security\RiyaTravels_1.sql" />
+    <Build Include="Security\Namrata.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\Get_CanPolicyResponse.sql" />
+    <Build Include="dbo\Stored Procedures\GetHotelApisLogs.sql" />
+    <Build Include="dbo\Stored Procedures\GetHotelDetailsResponse.sql" />
+    <Build Include="dbo\Stored Procedures\GetHotelSearchResponse.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_InsertExtServiceLogs.sql" />
+    <Build Include="Hotel\Stored Procedures\Get_BlockedRoom_Details.sql" />
+    <Build Include="Hotel\Stored Procedures\Insert_Sold_Out_RateInfo.sql" />
+    <Build Include="Hotel\Stored Procedures\sp_insertCachingApiLogs.sql" />
+    <Build Include="Security\Hotel.sql" />
+    <Build Include="Security\SS.sql" />
+    <Build Include="Security\Test.sql" />
+    <Build Include="Hotel\Sequences\CountBy1.sql" />
+    <Build Include="Test\Sequences\CountBy1.sql" />
+  </ItemGroup>
+</Project>

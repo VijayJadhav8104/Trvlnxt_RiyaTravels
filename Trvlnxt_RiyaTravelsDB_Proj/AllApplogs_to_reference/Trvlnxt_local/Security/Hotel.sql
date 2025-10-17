@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Hotel]
+    AUTHORIZATION [dbo];
+

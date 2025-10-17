@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [RiyaTravels]
+    WITH PASSWORD = N'httogqh9wgo`hipMpzuuZQ|lmsFT7_&#$!~<e|{tbxh,Aotx', SID = 0x3FFA2673433BC0449D010105FF2550C8, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

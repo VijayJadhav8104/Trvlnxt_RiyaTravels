@@ -1,0 +1,2 @@
+﻿CREATE USER [Namrata] WITHOUT LOGIN;
+

@@ -1,0 +1,5 @@
+﻿CREATE SEQUENCE [Hotel].[CountBy1]
+    AS BIGINT
+    START WITH 460
+    INCREMENT BY 1;
+
